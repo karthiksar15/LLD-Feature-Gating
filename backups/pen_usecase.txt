@@ -1,0 +1,66 @@
+Design a Pen
+
+Should support writing
+Ink should reduce when we write
+Should support refill
+Should not support write if there is no ink or the nib is broken
+There can be different types of pens (ball pen, ink pen etc)
+
+Steps
+
+1. Figure out the entities
+
+2. Figure out the methods
+
+3. Relations b/w the entities
+
+
+Entities 
+
+Pen
+
+Brand
+
+Nib
+
+Ink
+
+Enum PenType
+
+
+IWriteStrategy [SketchStrategy, BallPointStrategy, GelStrategy, InkStrategy]
+
+IRefillStrategy [ChangeRefilStrategy, AddInkStrategy]
+
+IChangeNib[]
+
+
+New Pen(IWriteStrategy, IRefillStrategy, IChangeNib)
+
+
+UML? [Class diagram]
+
+ 
+2)1.Weather Monitoring App (Ref. Head-First-Design-Patterns book) observer pattern
+
+#Business Requirement Document
+
+#Version 1.0
+
+
+
+Create a system for real time monitoring of weather updates using our WeatherData object, which tracks current weather conditions (temperature, humidity, and barometric pressure).
+The system should support three display elements, 
+
+
+1. The current conditions.
+2. Weather statistics
+3. Simple forecast
+All updated in real time (as the WeatherData object acquires the most recent measurements)
+
+The system should expose APIs for developers/systems who want to plug-in their owm displays.
+
+System Design Question:
+Assume there are 
+100 million text files/novels. I need to design a text suggestion tool, based on the 100million novels, while the user is typing search text in Amazon website.
+
