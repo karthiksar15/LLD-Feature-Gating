@@ -8,20 +8,21 @@ import java.util.Set;
 public class Item {
 
 
-	Config config=new Config();
+	
+	ValidationUserFields validate=new ValidationUserFields();
 	
 	public void Validate(User user)
 	{
 		
-			Map<String,String> condMp=config.getConditionExpressions();
+			Map<String,String> condMp=Config.getConditionExpressions();
 			for(String exp:condMp.keySet())
 			{
-			Util.isAllowed(condMp.get(exp),getValidationUserMp(user));
+			Util.isAllowed(condMp.get(exp),getValidationUser(user));
 			}
 		
 	}
 	
-	public Map<String,Object> getValidationUserMp(User user)
+	public Map<String,Object> getValidationUser(User user)
 	{
 			Map<String, Object> userMp=new HashMap<String, Object>();
 			
